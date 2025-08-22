@@ -1,14 +1,20 @@
 {
   "name": "schedapi-ssr",
-  "version": "1.0.50",
+  "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.tsx",
+    "build": "bun build --compile --minify --target bun --outfile schedapi-ssr ./src/index.tsx"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/html": "^1.2.0",
+    "@elysiajs/static": "^1.2.0",
+    "elysia": "latest",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "windows-1251": "^3.0.4"
   },
   "devDependencies": {
+    "@types/react-dom": "^19.1.1",
     "bun-types": "latest"
   },
   "module": "src/index.js"

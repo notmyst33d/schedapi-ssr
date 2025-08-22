@@ -1,0 +1,11 @@
+services:
+  schedapi-ssr:
+    build: .
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      - PORT=${PORT}
+      - API=${API}
+    restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
